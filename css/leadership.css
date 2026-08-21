@@ -1,0 +1,1525 @@
+/* =========================================================
+   IKI INFRA — LEADERSHIP
+   Premium Editorial / Infrastructure UI
+========================================================= */
+
+:root {
+    --lead-black: #07100d;
+    --lead-dark: #0b1511;
+    --lead-dark-2: #101b16;
+
+    --lead-white: #ffffff;
+    --lead-soft: #f4f6f3;
+    --lead-soft-2: #eef1ee;
+
+    --lead-text: #18211d;
+    --lead-muted: #717b76;
+    --lead-light-text: rgba(255, 255, 255, 0.55);
+
+    --lead-accent: #cdb250;
+    --lead-accent-dark: #cdb250;
+
+    --lead-line: rgba(7, 16, 13, 0.10);
+    --lead-line-dark: rgba(255, 255, 255, 0.10);
+
+    --lead-radius: 24px;
+    --lead-radius-lg: 32px;
+
+    --lead-transition:
+        0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* =========================================================
+   GLOBAL PAGE
+========================================================= */
+
+body {
+    overflow-x: hidden;
+    background: var(--lead-white);
+    color: var(--lead-text);
+}
+
+main {
+    overflow: hidden;
+}
+
+::selection {
+    background: var(--lead-accent);
+    color: var(--lead-black);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.leadership-hero {
+    position: relative;
+
+    min-height: 92vh;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    padding: 170px 0 115px;
+
+    background:
+        radial-gradient(circle at 85% 18%,
+            rgba(185, 255, 102, 0.10),
+            transparent 26%),
+        linear-gradient(145deg,
+            #07100d 0%,
+            #0a1511 55%,
+            #07100d 100%);
+
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   HERO GRID
+========================================================= */
+
+.leadership-grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.55;
+
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px),
+        linear-gradient(90deg,
+            rgba(255, 255, 255, 0.045) 1px,
+            transparent 1px);
+
+    background-size: 75px 75px;
+
+    mask-image:
+        linear-gradient(to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.75) 45%,
+            transparent 100%);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.75) 45%,
+            transparent 100%);
+}
+
+
+/* =========================================================
+   HERO GLOW
+========================================================= */
+
+.leadership-glow {
+    position: absolute;
+
+    width: 700px;
+    height: 700px;
+
+    right: -260px;
+    top: -280px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(185, 255, 102, 0.12),
+            rgba(185, 255, 102, 0.035) 35%,
+            transparent 70%);
+
+    filter: blur(10px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO DECORATIVE RINGS
+========================================================= */
+
+.leadership-hero::before,
+.leadership-hero::after {
+    content: "";
+
+    position: absolute;
+
+    border: 1px solid rgba(185, 255, 102, 0.08);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.leadership-hero::before {
+    width: 520px;
+    height: 520px;
+
+    right: -220px;
+    top: -160px;
+}
+
+.leadership-hero::after {
+    width: 380px;
+    height: 380px;
+
+    right: -150px;
+    top: -90px;
+
+    border-color: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.leadership-eyebrow {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 28px;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.leadership-eyebrow span {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--lead-accent);
+
+    box-shadow:
+        0 0 0 6px rgba(185, 255, 102, 0.07),
+        0 0 25px rgba(185, 255, 102, 0.35);
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.leadership-title {
+    max-width: 1050px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(68px, 9.3vw, 142px);
+    font-weight: 600;
+
+    line-height: 0.84;
+
+    letter-spacing: -0.085em;
+
+    text-wrap: balance;
+}
+
+.leadership-title span {
+    display: block;
+
+    color: var(--lead-accent);
+}
+
+
+/* =========================================================
+   HERO INTRO
+========================================================= */
+
+.leadership-intro {
+    max-width: 560px;
+
+    margin: 38px 0 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    letter-spacing: 0.005em;
+}
+
+
+/* =========================================================
+   HERO NUMBER
+========================================================= */
+
+.hero-number {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    margin-bottom: 8px;
+}
+
+.hero-number>span {
+    color: var(--lead-accent);
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(70px, 7vw, 105px);
+    font-weight: 500;
+
+    line-height: 0.8;
+
+    letter-spacing: -0.09em;
+}
+
+.hero-number>div {
+    width: 80px;
+    height: 1px;
+
+    margin: 20px 0 13px;
+
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-number small {
+    color: rgba(255, 255, 255, 0.28);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    line-height: 1.65;
+
+    letter-spacing: 0.16em;
+
+    text-align: right;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   HERO BOTTOM LINE
+========================================================= */
+
+.hero-bottom-line {
+    position: absolute;
+
+    right: 45px;
+    bottom: 28px;
+    left: 45px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    color: rgba(255, 255, 255, 0.22);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+========================================================= */
+
+.section-padding {
+    padding: 145px 0;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 28px;
+
+    color: #77817c;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.17em;
+
+    text-transform: uppercase;
+}
+
+.section-label span {
+    color: #a3aaa6;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.leadership-philosophy {
+    position: relative;
+
+    background: var(--lead-white);
+}
+
+.philosophy-title {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(52px, 6.2vw, 84px);
+    font-weight: 600;
+
+    line-height: 0.91;
+
+    letter-spacing: -0.078em;
+}
+
+.philosophy-title span {
+    color: #9ba49f;
+}
+
+.philosophy-large {
+    max-width: 670px;
+
+    margin: 0 0 52px;
+
+    color: #4d5852;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(20px, 2vw, 25px);
+
+    line-height: 1.48;
+
+    letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   PHILOSOPHY POINTS
+========================================================= */
+
+.philosophy-points {
+    border-top: 1px solid var(--lead-line);
+}
+
+.philosophy-point {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    gap: 20px;
+
+    padding: 25px 0;
+
+    border-bottom: 1px solid var(--lead-line);
+
+    transition:
+        padding var(--lead-transition);
+}
+
+.philosophy-point:hover {
+    padding-left: 8px;
+}
+
+.philosophy-point>span {
+    color: #a0aaa4;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 0.05em;
+}
+
+.philosophy-point h3 {
+    margin: 0 0 8px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    letter-spacing: -0.045em;
+}
+
+.philosophy-point p {
+    max-width: 500px;
+
+    margin: 0;
+
+    color: #7a8580;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   TEAM
+========================================================= */
+
+.leadership-team {
+    padding: 0 0 145px;
+
+    background: var(--lead-white);
+}
+
+.team-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    margin-bottom: 60px;
+}
+
+.team-heading h2 {
+    max-width: 750px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(52px, 6.2vw, 84px);
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.08em;
+}
+
+.team-heading h2 span {
+    color: #9ba49f;
+}
+
+.team-heading>p {
+    max-width: 360px;
+
+    margin: 0 0 5px;
+
+    color: #758079;
+
+    font-size: 11px;
+
+    line-height: 1.85;
+}
+
+
+/* =========================================================
+   LEADER CARD
+========================================================= */
+
+.leader-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(7, 16, 13, 0.06);
+
+    border-radius: var(--lead-radius);
+
+    background: var(--lead-soft);
+
+    transition:
+        transform var(--lead-transition),
+        box-shadow var(--lead-transition);
+}
+
+.leader-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 70px rgba(7, 16, 13, 0.10);
+}
+
+
+/* =========================================================
+   LEADER IMAGE
+========================================================= */
+
+.leader-image {
+    position: relative;
+
+    width: 100%;
+    height: 560px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(145deg,
+            #e9ece9,
+            #f7f8f7);
+}
+
+.leader-featured .leader-image {
+    height: 560px;
+}
+
+
+/* =========================================================
+   LEADER PHOTO
+========================================================= */
+
+.leader-photo {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.leader-card:hover .leader-photo {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.leader-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(to top,
+            rgba(7, 16, 13, 0.28),
+            transparent 40%);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LEADER OVERLAY
+========================================================= */
+
+.leader-overlay {
+    position: absolute;
+    inset: 0;
+
+    z-index: 4;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    opacity: 0;
+
+    background:
+        linear-gradient(to top,
+            rgba(7, 16, 13, 0.50),
+            transparent 45%);
+
+    transition:
+        opacity var(--lead-transition);
+}
+
+.leader-card:hover .leader-overlay {
+    opacity: 1;
+}
+
+.leader-overlay a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--lead-accent);
+
+    color: var(--lead-black);
+
+    font-size: 16px;
+
+    text-decoration: none;
+
+    transform: translateY(10px);
+
+    transition:
+        transform var(--lead-transition);
+}
+
+.leader-card:hover .leader-overlay a {
+    transform: translateY(0);
+}
+
+.leader-overlay a:hover {
+    background: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   LEADER INFO
+========================================================= */
+
+.leader-info {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 27px 28px;
+}
+
+.leader-number {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #a0aaa5;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+.leader-info h3 {
+    margin: 0 0 5px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.045em;
+}
+
+.leader-info p {
+    margin: 0 0 8px;
+
+    color: #707b75;
+
+    font-size: 10px;
+}
+
+.leader-role {
+    display: block;
+
+    color: #969f9a;
+
+    font-size: 8px;
+    font-weight: 600;
+
+    letter-spacing: 0.06em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   LEADER EXPAND
+========================================================= */
+
+.leader-expand {
+    width: 45px;
+    height: 45px;
+
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--lead-line);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #69746e;
+
+    transition:
+        all var(--lead-transition);
+}
+
+.leader-card:hover .leader-expand {
+    border-color: var(--lead-black);
+
+    background: var(--lead-black);
+
+    color: var(--lead-accent);
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================================
+   PRINCIPLES
+========================================================= */
+
+.leadership-principles {
+    background:
+        linear-gradient(135deg,
+            #f4f6f3,
+            #eef1ee);
+}
+
+.principles-title {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(52px, 6.2vw, 82px);
+    font-weight: 600;
+
+    line-height: 0.91;
+
+    letter-spacing: -0.08em;
+}
+
+.principles-title span {
+    color: #929d97;
+}
+
+
+/* =========================================================
+   PRINCIPLE LIST
+========================================================= */
+
+.principles-list {
+    border-top: 1px solid var(--lead-line);
+}
+
+.principle-item {
+    display: grid;
+
+    grid-template-columns: 58px 1fr;
+
+    gap: 24px;
+
+    padding: 28px 0;
+
+    border-bottom: 1px solid var(--lead-line);
+
+    transition:
+        padding var(--lead-transition);
+}
+
+.principle-item:hover {
+    padding-left: 8px;
+}
+
+
+/* =========================================================
+   PRINCIPLE ICON
+========================================================= */
+
+.principle-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--lead-line);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #69746e;
+
+    font-size: 17px;
+
+    transition:
+        all var(--lead-transition);
+}
+
+.principle-item:hover .principle-icon {
+    border-color: var(--lead-black);
+
+    background: var(--lead-black);
+
+    color: var(--lead-accent);
+
+    transform: rotate(-5deg);
+}
+
+
+/* =========================================================
+   PRINCIPLE CONTENT
+========================================================= */
+
+.principle-item>div:last-child>span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #9ca6a1;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.1em;
+}
+
+.principle-item h3 {
+    margin: 0 0 7px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    letter-spacing: -0.045em;
+}
+
+.principle-item p {
+    max-width: 470px;
+
+    margin: 0;
+
+    color: #78837d;
+
+    font-size: 11px;
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   GOVERNANCE
+========================================================= */
+
+.governance-section {
+    padding: 0 0 145px;
+
+    background:
+        linear-gradient(135deg,
+            #f4f6f3,
+            #eef1ee);
+}
+
+.governance-box {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 90px;
+
+    border-radius: var(--lead-radius-lg);
+
+    background:
+        radial-gradient(circle at 100% 0%,
+            rgba(185, 255, 102, 0.08),
+            transparent 30%),
+        linear-gradient(135deg,
+            #07100d,
+            #0c1712);
+
+    color: #ffffff;
+
+    box-shadow:
+        0 30px 80px rgba(7, 16, 13, 0.12);
+}
+
+
+/* =========================================================
+   GOVERNANCE DECORATION
+========================================================= */
+
+.governance-bg {
+    position: absolute;
+
+    width: 620px;
+    height: 620px;
+
+    right: -220px;
+    top: -260px;
+
+    border: 1px solid rgba(185, 255, 102, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.governance-bg::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 70px;
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+
+    border-radius: 50%;
+}
+
+.governance-bg::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 150px;
+
+    border: 1px solid rgba(185, 255, 102, 0.06);
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   GOVERNANCE CONTENT
+========================================================= */
+
+.governance-box .section-label {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.governance-box .section-label span {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.governance-box h2 {
+    position: relative;
+
+    max-width: 720px;
+
+    margin: 0;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(50px, 6.2vw, 82px);
+    font-weight: 600;
+
+    line-height: 0.9;
+
+    letter-spacing: -0.08em;
+}
+
+.governance-box h2 span {
+    display: block;
+
+    color: var(--lead-accent);
+}
+
+.governance-box p {
+    max-width: 590px;
+
+    margin: 32px 0 0;
+
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   GOVERNANCE METRICS
+========================================================= */
+
+.governance-metrics {
+    position: relative;
+
+    border-top: 1px solid var(--lead-line-dark);
+}
+
+.governance-metrics>div {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 23px 0;
+
+    border-bottom: 1px solid var(--lead-line-dark);
+
+    transition:
+        padding var(--lead-transition);
+}
+
+.governance-metrics>div:hover {
+    padding-left: 8px;
+}
+
+.governance-metrics strong {
+    min-width: 25px;
+
+    color: var(--lead-accent);
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.governance-metrics span {
+    color: rgba(255, 255, 255, 0.42);
+
+    font-size: 10px;
+
+    letter-spacing: 0.03em;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.leadership-cta {
+    position: relative;
+
+    background: var(--lead-white);
+
+    text-align: center;
+}
+
+.cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-inner .section-label {
+    justify-content: center;
+}
+
+.cta-inner h2 {
+    max-width: 1000px;
+
+    margin: 0 0 48px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(58px, 8vw, 112px);
+    font-weight: 600;
+
+    line-height: 0.87;
+
+    letter-spacing: -0.085em;
+}
+
+.cta-inner h2 span {
+    display: block;
+
+    color: #929d97;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.cta-inner .btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-height: 54px;
+
+    padding: 0 27px;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background: var(--lead-black);
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.02em;
+
+    text-decoration: none;
+
+    transition:
+        all var(--lead-transition);
+}
+
+.cta-inner .btn-primary-custom i {
+    color: var(--lead-accent);
+
+    transition:
+        transform var(--lead-transition);
+}
+
+.cta-inner .btn-primary-custom:hover {
+    background: var(--lead-accent);
+
+    color: var(--lead-black);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 35px rgba(7, 16, 13, 0.15);
+}
+
+.cta-inner .btn-primary-custom:hover i {
+    color: var(--lead-black);
+
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   STAGGER
+========================================================= */
+
+.leader-card:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.leader-card:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .leadership-title {
+        font-size: clamp(65px, 9vw, 115px);
+    }
+
+    .leader-image,
+    .leader-featured .leader-image {
+        height: 500px;
+    }
+
+    .governance-box {
+        padding: 75px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE/TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .leadership-hero {
+        min-height: auto;
+
+        padding:
+            155px 0 105px;
+    }
+
+    .hero-number {
+        align-items: flex-start;
+
+        margin-top: 75px;
+    }
+
+    .hero-number small {
+        text-align: left;
+    }
+
+    .hero-bottom-line {
+        display: none;
+    }
+
+    .section-padding {
+        padding: 105px 0;
+    }
+
+    .team-heading {
+        display: block;
+    }
+
+    .team-heading>p {
+        margin-top: 25px;
+    }
+
+    .governance-box {
+        padding: 65px 55px;
+    }
+
+    .governance-metrics {
+        margin-top: 60px;
+    }
+
+    .leadership-team {
+        padding-bottom: 105px;
+    }
+
+    .governance-section {
+        padding-bottom: 105px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .leadership-hero {
+        padding:
+            135px 0 85px;
+    }
+
+    .leadership-title {
+        font-size: clamp(55px, 15vw, 78px);
+
+        line-height: 0.87;
+    }
+
+    .leadership-intro {
+        max-width: 420px;
+
+        margin-top: 30px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .hero-number {
+        margin-top: 60px;
+    }
+
+    .hero-number>span {
+        font-size: 75px;
+    }
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    .section-label {
+        margin-bottom: 22px;
+    }
+
+    .philosophy-title,
+    .principles-title {
+        font-size: clamp(48px, 13vw, 68px);
+    }
+
+    .philosophy-large {
+        margin-bottom: 40px;
+
+        font-size: 19px;
+    }
+
+    .philosophy-point {
+        grid-template-columns: 35px 1fr;
+
+        gap: 15px;
+    }
+
+    .leadership-team {
+        padding-bottom: 80px;
+    }
+
+    .team-heading {
+        margin-bottom: 40px;
+    }
+
+    .team-heading h2 {
+        font-size: clamp(48px, 13vw, 68px);
+    }
+
+    .leader-image,
+    .leader-featured .leader-image {
+        height: 430px;
+    }
+
+    .leader-info {
+        padding: 23px 20px;
+    }
+
+    .leader-info h3 {
+        font-size: 18px;
+    }
+
+    .leader-role {
+        max-width: 220px;
+
+        line-height: 1.5;
+    }
+
+    .leader-expand {
+        width: 40px;
+        height: 40px;
+    }
+
+    .principle-item {
+        grid-template-columns: 50px 1fr;
+
+        gap: 17px;
+
+        padding: 23px 0;
+    }
+
+    .principle-icon {
+        width: 43px;
+        height: 43px;
+
+        border-radius: 12px;
+    }
+
+    .governance-section {
+        padding-bottom: 80px;
+    }
+
+    .governance-box {
+        padding: 45px 27px;
+
+        border-radius: 24px;
+    }
+
+    .governance-box h2 {
+        font-size: clamp(45px, 13vw, 68px);
+    }
+
+    .governance-box p {
+        font-size: 11px;
+    }
+
+    .governance-metrics {
+        margin-top: 45px;
+    }
+
+    .governance-bg {
+        width: 430px;
+        height: 430px;
+
+        right: -240px;
+        top: -160px;
+    }
+
+    .cta-inner h2 {
+        font-size: clamp(48px, 14vw, 70px);
+    }
+
+    .cta-inner .btn-primary-custom {
+        min-height: 50px;
+
+        padding: 0 23px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL DEVICES
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .leadership-title {
+        font-size: 54px;
+    }
+
+    .leader-image,
+    .leader-featured .leader-image {
+        height: 390px;
+    }
+
+    .leader-info {
+        align-items: flex-end;
+    }
+
+    .leader-role {
+        display: none;
+    }
+
+    .governance-box {
+        padding: 40px 23px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
